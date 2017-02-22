@@ -9,7 +9,7 @@
   * Submit a question, observation, and how long you spent on canvas  
   
 ## Learning Objectives  
-* Firebase Auth
+* Firebase Database requests
 
 ## Resources  
 * [firebase admin sdk docs](https://firebase.google.com/docs/admin/setup)
