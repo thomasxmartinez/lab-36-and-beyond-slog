@@ -1,10 +1,16 @@
 'use strict';
 
+
+require('./scss/main.scss');
+console.log('lulwtflocka');
 const angular = require('angular');
+
+const ngMarked = require('angular-marked');
 const uiRouter = require('angular-ui-router');
-angular.module('slog', [uiRouter])
+
+angular.module('slog', [uiRouter, ngMarked])
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
-  $urlRouterProvider.when('', '/layout');
+  $urlRouterProvider.when('', '/admin');
 
   let routes = [
     {
@@ -20,7 +26,7 @@ angular.module('slog', [uiRouter])
     {
       name: 'dashboard',
       url: '/dashboard',
-      template: '<h1> the dashboard </h1>',
+      template: '<dashboard> </dashboard>',
     },
   ];
 
@@ -30,10 +36,14 @@ angular.module('slog', [uiRouter])
 
 // load services
 require('./service/admin-service.js');
+require('./service/page-service.js');
 
 //load containers
 require('./container/admin');
+require('./container/dashboard');
 
 //load components
 require('./component/login');
 require('./component/layout');
+require('./component/page-editor');
+require('./component/page-select');

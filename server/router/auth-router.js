@@ -6,5 +6,6 @@ const basicAuth = require('../lib/basic-auth.js');
 const authRouter = module.exports = new Router();
 
 authRouter.get('/api/login', basicAuth, (req, res, next) => {
+  console.log(req, 'wtflocka');
   res.send(req.token);
 });

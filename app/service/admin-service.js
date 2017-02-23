@@ -48,6 +48,7 @@ function authService($log, $q, $window, $http){
 
     return $http.get(url, config)
     .then(res => {
+      console.log(res, 'wtflocka');
       return tokenSave(res.data);
     });
   };
