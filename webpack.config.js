@@ -32,7 +32,7 @@ if(production){
       },
     }),
   ]);
-  output.publicPath = 'https://d2tj2ugz5ikfhq.cloudfront.net';
+  output.publicPath = 'https://d2z5995nuul95s.cloudfront.net';
 }
 
 module.exports = {
