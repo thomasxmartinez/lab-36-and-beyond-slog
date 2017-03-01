@@ -5,6 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "node main.js",
+    "heroku-postbuild": "./node_modules/webpack/bin/webpack.js",
     "watch": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
     "test": "./node_modules/mocha/bin/mocha ./server/test"
   },

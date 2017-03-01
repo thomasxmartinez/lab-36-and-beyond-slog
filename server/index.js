@@ -32,9 +32,13 @@ app.use(morgan(process.env.LOG_FORMAT));
 app.use(require('./router/auth-router.js'));
 app.use(require('./router/page-router.js'));
 
+// static server
+app.use(express.static(`${__dirname}/../build`));
+app.get('*', (req, res) => res.redirect('/'));
+
 // error middlware
 app.use((err, req, res, next) => {
-  console.error(err.message);
+  console.error(err);
   if(err.status)
     return res.sendStatus(err.status);
   res.sendStatus(500);
